@@ -35,4 +35,4 @@ u can solve this by executing tsc --watch
 
 We still have to manually keep running the node command to see the output in terminal. We need a similar command like the compiling process. Well use the watch flag with node as well
 
-Now if u make changes in the ts file, in ur terminal youll see the output change as well
+Now if u make changes in the ts file, in ur terminal youll see the output change as well (node --watch filepath)
