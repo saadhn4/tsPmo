@@ -1,0 +1,38 @@
+1. TS is a programming language built on top of JS, to give it extra features ; primarily to add types to values 
+
+2. In JS, we dont need to specify what type of data gets stored in variables (string, number, boolean) and we're free to change the type of data as well. In Ts, the type cannot be changed later.
+
+3. JS - loosely typed ; TS - Strongly typed
+
+-- Benefits of TS:
+
+1. Better error feedback
+2. Better autocompletion and code hints
+3. Custom types 
+
+So basically Ts is JS with extra annotations
+
+//Installing TypeScript:
+
+npm i -g typescript
+
+//Compiling ts into js -> tsc filename(index.ts); this created a js file of the same name but .js
+
+but we dont want to have to do this everytime ; so we need a tsconfig file
+the command to make it is tsc --init 
+We can see in the json file theres a lot being commented, so well uncomment some of them. These being the rootDir and outDir
+
+in rootDir add src after the ./
+now in outDir add dist after ./
+
+create a src folder and add the ts file in that; Create a new folder dist bc this is where getting the output of our ts file 
+
+execute the ts file using just the command 'tsc' now
+
+however if we make a change in our tsc file well have to keep executing tsc to see the update in the dist
+
+u can solve this by executing tsc --watch 
+
+We still have to manually keep running the node command to see the output in terminal. We need a similar command like the compiling process. Well use the watch flag with node as well
+
+Now if u make changes in the ts file, in ur terminal youll see the output change as well
