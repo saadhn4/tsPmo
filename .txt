@@ -36,3 +36,16 @@ u can solve this by executing tsc --watch
 We still have to manually keep running the node command to see the output in terminal. We need a similar command like the compiling process. Well use the watch flag with node as well
 
 Now if u make changes in the ts file, in ur terminal youll see the output change as well (node --watch filepath)
+
+//E6: Functions 
+
+function addAllNumbers(items: number[]) {
+  const total = items.reduce((a, c) => a + c, 0);
+  console.log(total);
+}
+
+addAllNumbers([5, 7, 9, 11, 3, 2, 1]);
+
+if we hover over where the function is being called, it gives us a type of void; you can explicitly state void after the parameters
+
+if i wrote return total below the clg then the void would not be valid, since we are returning
