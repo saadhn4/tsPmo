@@ -91,8 +91,72 @@ const reviewOne: Review = {
   reviewer: reviewerOne,
 };
 
-function logReview(review: Review){
-  console.log(`Review by @${review.reviewer.username} (${review.rating} stars): ${review.content}`);
+function logReview(review: Review) {
+  console.log(
+    `Review by @${review.reviewer.username} (${review.rating} stars): ${review.content}`
+  );
 }
 
-logReview(reviewOne)
+logReview(reviewOne);
+
+// 4. Customer and purchase - Ali bought a laptop for $1200(Loyalty points: 240)
+
+interface Customer {
+  name: string;
+  loyaltyPoints: number;
+}
+
+interface Purchase {
+  product: string;
+  price: number;
+  customer: Customer;
+}
+
+const customerOne: Customer = {
+  name: "Ali",
+  loyaltyPoints: 240,
+};
+
+const purchaseOne: Purchase = {
+  product: "laptop",
+  price: 1200,
+  customer: customerOne,
+};
+
+function logPurchase(purchase: Purchase): void {
+  console.log(
+    `${purchase.customer.name} bought a ${purchase.product} for $${purchase.price} (Loyalty points: ${purchase.customer.loyaltyPoints})`
+  );
+}
+
+logPurchase(purchaseOne);
+
+// Trainer Zoya (level 5) completed 3 sessions for client Imran
+
+interface Trainer {
+  name: string;
+  level: number;
+}
+
+interface Client {
+  name: string;
+  sessions: number;
+}
+
+const trainerOne: Trainer = {
+  name: "Zoya",
+  level: 5,
+};
+
+const clientOne: Client = {
+  name: "Imran",
+  sessions: 3,
+};
+
+function logMessage(client: Client, trainer: Trainer): void {
+  console.log(
+    `Trainer ${trainer.name} (level ${trainer.level}) completed ${client.sessions} sessions for client ${client.name}`
+  );
+}
+
+logMessage(clientOne, trainerOne);

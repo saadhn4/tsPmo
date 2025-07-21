@@ -49,3 +49,7 @@ addAllNumbers([5, 7, 9, 11, 3, 2, 1]);
 if we hover over where the function is being called, it gives us a type of void; you can explicitly state void after the parameters
 
 if i wrote return total below the clg then the void would not be valid, since we are returning
+
+Ep 10. 
+
+type has = ; but interface does not 

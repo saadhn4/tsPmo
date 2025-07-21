@@ -30,3 +30,28 @@ function logReview(review) {
     console.log(`Review by @${review.reviewer.username} (${review.rating} stars): ${review.content}`);
 }
 logReview(reviewOne);
+const customerOne = {
+    name: "Ali",
+    loyaltyPoints: 240,
+};
+const purchaseOne = {
+    product: "laptop",
+    price: 1200,
+    customer: customerOne,
+};
+function logPurchase(purchase) {
+    console.log(`${purchase.customer.name} bought a ${purchase.product} for $${purchase.price} (Loyalty points: ${purchase.customer.loyaltyPoints})`);
+}
+logPurchase(purchaseOne);
+const trainerOne = {
+    name: "Zoya",
+    level: 5,
+};
+const clientOne = {
+    name: "Imran",
+    sessions: 3,
+};
+function logMessage(client, trainer) {
+    console.log(`Trainer ${trainer.name} (level ${trainer.level}) completed ${client.sessions} sessions for client ${client.name}`);
+}
+logMessage(clientOne, trainerOne);
